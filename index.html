@@ -108,13 +108,15 @@
 </footer>
 
 <script>
-let images = ["game1-1.gif", "game1-2.gif", "game1-3.gif", "game1-4.gif"];
-let index = 0;
+window.onload = function() {
+  let images = ["game1-1.gif", "game1-2.gif", "game1-3.gif", "game1-4.gif"];
+  let index = 0;
 
-setInterval(() => {
-  index = (index + 1) % images.length;
-  document.getElementById("game1").src = images[index];
-}, 1200);
+  setInterval(() => {
+    index = (index + 1) % images.length;
+    document.getElementById("game1").src = images[index];
+  }, 1000);
+};
 </script>
 
 </body>
