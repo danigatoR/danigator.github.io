@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Mi Portfolio</title>
+  <title>danigatoR</title>
   <style>
     body {
       margin: 0;
@@ -86,7 +86,7 @@
 <section class="grid">
 
   <div class="card">
-    <img src="game1.gif" alt="Juego 1">
+    <img id="game1" src="game1-1.gif">
     <div class="card-content">
       <h3>Little Grey Adventure</h3>
       <p>Little Grey Adventure is a fast-paced 2D endless runner where the player controls a small grey alien trying to survive in a hostile environment. </p>
@@ -102,8 +102,18 @@
 </section>
 
 <footer>
-  <p>© 2026 - Tu nombre</p>
+  <p>© 2026 - danigatoR</p>
 </footer>
+
+<script>
+let images = ["game1-1.gif", "game1-2.gif", "game1-3.gif", "game1-4.gif"];
+let index = 0;
+
+setInterval(() => {
+  index = (index + 1) % images.length;
+  document.getElementById("game1").src = images[index];
+}, 1200);
+</script>
 
 </body>
 </html>
