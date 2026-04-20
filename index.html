@@ -12,10 +12,68 @@
       color: #eaeaea;
     }
 
+    /* HEADER */
+    header {
+      text-align: center;
+      padding: 60px 20px 40px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      color: #aaa;
+      margin-top: 10px;
+    }
+
+    /* GRID TARJETAS */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: #1a1a1a;
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      display: block;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    .card h3 {
+      margin: 0 0 5px;
+    }
+
+    .card p {
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+
+    /* PROYECTO */
     .project {
       max-width: 800px;
-      margin: 60px auto;
+      margin: 80px auto;
       padding: 20px;
+      border-top: 1px solid #222;
     }
 
     h2 {
@@ -68,7 +126,27 @@
 
 <body>
 
-<section class="project">
+<!-- HEADER -->
+<header>
+  <h1>danigatoR</h1>
+  <p>2D Game Developer · Python · Pygame</p>
+</header>
+
+<!-- TARJETAS -->
+<section class="projects-grid">
+
+  <div class="card" onclick="document.getElementById('project1').scrollIntoView({behavior: 'smooth'})">
+    <img src="game1-1.gif">
+    <div class="card-content">
+      <h3>Little Grey Adventure</h3>
+      <p>Endless runner with increasing difficulty</p>
+    </div>
+  </div>
+
+</section>
+
+<!-- PROYECTO DETALLADO -->
+<section class="project" id="project1">
 
   <h2>Little Grey Adventure</h2>
 
@@ -83,29 +161,24 @@
     <a href="https://github.com/tu-repo" target="_blank">Código</a>
   </div>
 
-  <!-- GIF 1 -->
   <div class="feature">
     <img src="game1-1.gif">
     <p>Menu with hand-drawn pixel art design.</p>
   </div>
 
-  <!-- GIF 2 -->
   <div class="feature">
     <img src="game1-2.gif">
     <p>Depending on the size of the obstacles, the jump can be charged more or less.</p>
   </div>
 
-  <!-- GIF 3 -->
   <div class="feature">
     <img src="game1-3.gif">
     <p>Crouching system for obstacle avoidance. You can fall faster by crouching in mid-air.</p>
   </div>
 
-  <!-- GIF 4 -->
   <div class="feature">
     <img src="game1-4.gif">
-    <p>Upon impact, the screen shakes and turns black and white.
-</p>
+    <p>Upon impact, the screen shakes and turns black and white.</p>
   </div>
 
 </section>
