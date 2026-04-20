@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f0f0f;
+      color: #eaeaea;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    p {
+      color: #aaa;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .card {
+      background: #1a1a1a;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      display: block;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    .buttons a {
+      text-decoration: none;
+      color: white;
+      background: #333;
+      padding: 8px 12px;
+      margin-right: 10px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+    }
+
+    .buttons a:hover {
+      background: #555;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Tu Nombre</h1>
+  <p>Desarrollador de juegos 2D</p>
+</header>
+
+<section class="grid">
+
+  <div class="card">
+    <img src="game1.gif" alt="Juego 1">
+    <div class="card-content">
+      <h3>Juego 1</h3>
+      <p>Plataformas retro con físicas simples</p>
+      <div class="buttons">
+        <a href="https://tu-link-itch.io" target="_blank">Jugar</a>
+        <a href="https://github.com/tu-repo" target="_blank">Código</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Duplica este bloque para más juegos -->
+
+</section>
+
+<footer>
+  <p>© 2026 - Tu nombre</p>
+</footer>
+
+</body>
+</html>
