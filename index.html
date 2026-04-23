@@ -123,6 +123,25 @@
       font-size: 0.95rem;
     }
 
+    .footer {
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 1px solid #222;
+      margin-top: 60px;
+    }
+
+    .footer img {
+      width: 30px;
+      margin: 0 10px;
+      opacity: 0.7;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+
+    .footer img:hover {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+
   </style>
 </head>
 
@@ -140,7 +159,7 @@
   <div class="card" onclick="document.getElementById('project1').scrollIntoView({behavior: 'smooth'})">
     <img src="game1-1.gif">
     <div class="card-content">
-      <h3>Little Grey Adventure</h3>
+      <h3>👽Little Grey Adventure</h3>
       <p>Endless runner with increasing difficulty</p>
     </div>
   </div>
@@ -148,8 +167,8 @@
   <div class="card" onclick="document.getElementById('project2').scrollIntoView({behavior: 'smooth'})">
     <img src="game2-2.gif">
     <div class="card-content">
-      <h3>Nombre del Juego 2</h3>
-      <p>Breve descripción</p>
+      <h3>🐍Snake Game</h3>
+      <p>Developed in Python using the pygame library.</p>
     </div>
   </div>
 
@@ -200,9 +219,7 @@
   <p class="description">
     Snake game developed in Python using the pygame library.
     The goal of this project was to build a fully functional version of the classic Snake game while learning the basics of game loops, event handling, rendering, and state management in pygame.
-    * Defined a `CELL_SIZE` of 20 pixels.
-    * Built a grid-based movement system so the snake moves cell by cell.
-    * Drew a background grid to visualize the play area.
+    Defined a `CELL_SIZE` of 20 pixels. Built a grid-based movement system so the snake moves cell by cell. Drew a background grid to visualize the play area.
   </p>
 
   <div class="buttons">
@@ -212,7 +229,7 @@
 
   <div class="feature">
     <img src="game2-1.png">
-    <p>* Direction controlled with arrow keys. Movement implemented by:calculating a new head position. inserting the new head at the start of the list. removing the last segment unless food is eaten.</p>
+    <p>Direction controlled with arrow keys. Movement implemented by:calculating a new head position. inserting the new head at the start of the list. removing the last segment unless food is eaten.</p>
   </div>
 
   <div class="feature">
@@ -226,6 +243,17 @@
   </div>
 
 </section>
+
+<footer class="footer">
+  <p style="color:#777; margin-bottom:10px;">Contacto</p>
+  <a href="https://github.com/danigatoR" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+  </a>
+
+  <a href="https://danigator.itch.io/little-grey-adventure" target="_blank">
+    <img src="https://static.itch.io/images/itchio-textless-white.svg" alt="itch.io">
+  </a>
+</footer>
 
 </body>
 </html>
