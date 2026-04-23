@@ -43,16 +43,18 @@
       border-radius: 10px;
       overflow: hidden;
       cursor: pointer;
-      transition: transform 0.2s;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
 
     .card:hover {
       transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
     }
 
     .card img {
       width: 100%;
-      display: block;
+      aspect-ratio: 16 / 9;   /* formato horizontal */
+      object-fit: cover;
     }
 
     .card-content {
@@ -143,6 +145,14 @@
     </div>
   </div>
 
+  <div class="card" onclick="document.getElementById('project2').scrollIntoView({behavior: 'smooth'})">
+    <img src="game2-2.gif">
+    <div class="card-content">
+      <h3>Nombre del Juego 2</h3>
+      <p>Breve descripción</p>
+    </div>
+  </div>
+
 </section>
 
 <!-- PROYECTO DETALLADO -->
@@ -179,6 +189,40 @@
   <div class="feature">
     <img src="game1-4.gif">
     <p>Upon impact, the screen shakes and turns black and white.</p>
+  </div>
+
+</section>
+
+<section class="project" id="project2">
+
+  <h2>Snake game</h2>
+
+  <p class="description">
+    Snake game developed in Python using the pygame library.
+    The goal of this project was to build a fully functional version of the classic Snake game while learning the basics of game loops, event handling, rendering, and state management in pygame.
+    * Defined a `CELL_SIZE` of 20 pixels.
+    * Built a grid-based movement system so the snake moves cell by cell.
+    * Drew a background grid to visualize the play area.
+  </p>
+
+  <div class="buttons">
+    <a href="#">Jugar</a>
+    <a href="#">Código</a>
+  </div>
+
+  <div class="feature">
+    <img src="game2-1.png">
+    <p>* Direction controlled with arrow keys. Movement implemented by:calculating a new head position. inserting the new head at the start of the list. removing the last segment unless food is eaten.</p>
+  </div>
+
+  <div class="feature">
+    <img src="game2-2.gif">
+    <p>When the snake eats food, a new head is inserted. the tail is not removed. score increases.</p>
+  </div>
+
+  <div class="feature">
+    <img src="game2-3.png">
+    <p>Display "GAME OVER" Show final score. Allow restart with the `R` key.</p>
   </div>
 
 </section>
